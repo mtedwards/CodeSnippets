@@ -57,3 +57,63 @@ The post thumbnail
 	?>
 
 ```
+#FORMS
+
+##Validation
+
+```jQuery
+     /* FORM VALIDATION */
+     
+     // First hide errors on page load
+     $('form .error').hide();
+     
+     // Define Function to validate email
+      function checkEmail(email) { 
+          var pattern = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+          var emailVal = email;
+          return pattern.test(emailVal);
+      }
+    
+     // ON FORM SUBMISSION
+     $("form input.submit").click(function() {  
+      
+      // Hide any errors again (In case the form has already created errors).  
+       $('.error').hide();
+
+      // Define Variable for validation and to post
+      var Firstname = $("input#FirstName").val();
+      var LastName = $("input#LastName").val();
+      var Email = $("input#Email").val();
+      var State = $("select#State").val();
+      
+          
+      // Validate Firstname
+      if (Firstname == "") {
+        $("input#FirstName").focus();
+        $("input#FirstName").next().show();
+        return false;
+      } 
+      
+      // Validate LastName
+      if (LastName == "") {
+        $("input#LastName").focus();
+        $("input#LastName").next().show();
+        return false;
+      } 
+      
+      //Validate email by running it through the function.
+      if (!checkEmail(Email)) {
+        $("input#Email").focus();
+        $("input#Email").next().show();
+        return false;
+        }
+      
+      // Validate State
+      if (State == "") {
+        $("select#State").focus();
+        $("select#State").next().show();
+        return false;
+      }
+    }); 
+```   
+ 
