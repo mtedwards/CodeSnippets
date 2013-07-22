@@ -13,6 +13,15 @@ CodeSnippets that I refer to a lot:
     echo $something; ?>
 ```
 
+###Featured Images
+The post thumbnail
+```php
+if ( has_post_thumbnail() ) {
+  the_post_thumbnail('thumbnail', array('class' => 'alignleft'));
+}
+```
+
+
 ##The Loop
 
 ###Query by Custom Field
