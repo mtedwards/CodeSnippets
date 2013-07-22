@@ -16,9 +16,11 @@ CodeSnippets that I refer to a lot:
 ###Featured Images
 The post thumbnail
 ```php
-if ( has_post_thumbnail() ) {
-  the_post_thumbnail('thumbnail', array('class' => 'alignleft'));
-}
+<?php
+  if ( has_post_thumbnail() ) {
+    the_post_thumbnail('thumbnail', array('class' => 'alignleft'));
+  }
+?>
 ```
 
 
