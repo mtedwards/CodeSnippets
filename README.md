@@ -29,32 +29,33 @@ The post thumbnail
 
 ###Query by Custom Field
 ```php
-    	<?php
-    	  $args = array(
-  	    'post_type' => array(
-	      'your-post-type',
-	     ),
-	     'order' => 'ASC',           
-	     'orderby' => 'menu_order',
-	     'meta_key' => 'your-custom-field',
-	     'meta_value' => 'your-custom-field-value'
-	   );
-		    
-	  $the_query = new WP_Query( $args );
-	  // The Loop
-	  
-	  if ( $the_query->have_posts() ) :
-	    while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-        
-        	THE STUFF THAT HAPPENS
-        
-	<?php
-	    endwhile;
-	  endif;
-		    
-	  // Reset Post Data
-	  wp_reset_postdata();
-	?>
+  <?php
+    $args = array(
+      'post_type' => array(
+        'your-post-type',
+      ),
+      'order' => 'ASC',           
+      'orderby' => 'menu_order',
+      'meta_key' => 'your-custom-field',
+      'meta_value' => 'your-custom-field-value'
+    );
+    
+    $the_query = new WP_Query( $args );
+    // The Loop
+    
+    if ( $the_query->have_posts() ) :
+      while ( $the_query->have_posts() ) : $the_query->the_post(); 
+  ?>
+  
+  THE STUFF THAT HAPPENS
+  
+  <?php
+      endwhile;
+    endif;
+    
+    // Reset Post Data
+    wp_reset_postdata();
+  ?>
 
 ```
 #FORMS
