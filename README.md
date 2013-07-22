@@ -61,7 +61,7 @@ The post thumbnail
 
 ##Validation
 
-```jQuery
+```JavaScript
      /* FORM VALIDATION */
      
      // First hide errors on page load
