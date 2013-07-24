@@ -118,3 +118,11 @@ The post thumbnail
     }); 
 ```   
  
+ 
+#Compass
+
+```css
+@import "compass/css3"
+
+@include box-sizing(border-box);
+```
