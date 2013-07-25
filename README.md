@@ -121,8 +121,28 @@ The post thumbnail
  
 #Compass
 
+###Box Sizing
 ```css
 @import "compass/css3"
 
 @include box-sizing(border-box);
+```
+
+###Box Shadow
+```css
+ @import "compass/css3";
+
+// Default single box shadow
+#box-shadow-default {
+ @include single-box-shadow; 
+ }
+
+// Box shadow with custom settings
+#box-shadow-custom {
+ @include box-shadow(red 2px 2px 10px);
+ }
+ 
+#box-shadow-custom-multiple
+  @include box-shadow(rgba(blue, 0.4) 0 0 25px, rgba(green, 0.2) 0 0 3px 1px inset);
+  }
 ```
