@@ -146,3 +146,47 @@ The post thumbnail
   @include box-shadow(rgba(blue, 0.4) 0 0 25px, rgba(green, 0.2) 0 0 3px 1px inset);
   }
 ```
+
+#OTHER Code
+
+###Redirect to other site, with pause for Analytics
+
+####Don't forget came from code!!
+
+```php
+
+ <?php 
+   /*
+     Template Name: PUT THE TEMPLATE NAME
+   */
+ ?>
+ 
+  <head>
+  <title>TITLE FOR GOOGLE ANALYTICS</title>
+	 <script type="text/javascript">
+   
+   // Google Analytics - Check this is the right one for the site
+  	 
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'XXXXXXX']);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    
+    // Facebook Remarketing???
+
+      
+      // Google Remarketing??
+      
+    
+    setTimeout(function () {
+      window.location = "ADD THE ADDRESS HERE!!!!";
+    }, 200);
+  </script>
+  </head>
+  
+```
