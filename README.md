@@ -136,6 +136,17 @@ if ( function_exists( 'add_image_size' ) ) {
 @include box-sizing(border-box);
 ```
 
+###Text Shadow
+```css
+// Uses defaults set before the import above
+.has-single-shadow {
+  @include single-text-shadow; }
+ 
+// Can output up to ten text shadows
+.has-custom-shadow {
+  @include text-shadow(rgba(blue, 0.2) 1px 1px 0, rgba(blue, 0.2) 2px 2px 0, rgba(blue, 0.2) 3px 3px 0); }
+```
+
 ###Box Shadow
 ```css
  @import "compass/css3";
