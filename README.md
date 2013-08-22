@@ -166,6 +166,40 @@ if ( function_exists( 'add_image_size' ) ) {
   }
 ```
 
+
+###Transitions
+```css
+#width {
+  @include transition-property(width); }
+ 
+#width:hover {
+  width: 80px; }
+ 
+#width-duration {
+  @include transition-property(width);
+  @include transition-duration(2s); }
+ 
+#width-duration:hover {
+  width: 80px; }
+ 
+#width-duration-easein {
+  @include transition-property(width);
+  @include transition-duration(2s);
+  @include transition-timing-function(ease-in); }
+ 
+#width-duration-easein:hover {
+  width: 80px; }
+ 
+#width-delay {
+  @include transition-property(width);
+  @include transition-delay(2s); }
+ 
+#width-delay:hover {
+  width: 80px }
+```
+	
+
+
 #OTHER Code
 
 ###Redirect to other site, with pause for Analytics
