@@ -24,6 +24,16 @@ The post thumbnail
 ?>
 ```
 
+Get Custom Size
+```php
+<?php
+  if ( has_post_thumbnail() ) {
+    $url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'CUSTOM SIZE');
+  }
+?>
+```
+
+
 Add Image Size
 ```php
 if ( function_exists( 'add_image_size' ) ) { 
