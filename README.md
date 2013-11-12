@@ -14,6 +14,16 @@ CodeSnippets that I refer to a lot:
   ?>
 ```
 
+###Retrieve and display a Video URL
+
+```
+  <?php 
+    $song = get_field('song_link'); 
+    $song = preg_replace('/\s+/', '', $song);	
+    $song = wp_oembed_get($song);
+    echo $song;
+  ?>
+```
 ###Featured Images
 The post thumbnail
 ```php
