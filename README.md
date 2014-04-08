@@ -218,7 +218,14 @@ if ( function_exists( 'add_image_size' ) ) {
   width: 80px }
 ```
 	
+#jQuery - No conflict
 
+```javascript
+
+jQuery(document).ready(function( $ ) {
+
+});
+```
 
 #OTHER Code
 
