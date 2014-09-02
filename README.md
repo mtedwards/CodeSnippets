@@ -84,8 +84,20 @@ if ( function_exists( 'add_image_size' ) ) {
     // Reset Post Data
     wp_reset_postdata();
   ?>
-
 ```
+
+#Foundation
+
+##Settings
+
+```css
+// Using rem-calc for the below breakpoint causes issues with top bar
+   $topbar-breakpoint: 810px; // Change to 9999px for always mobile layout
+   $topbar-media-query:"only screen and (min-width: #{$topbar-breakpoint})" !default;
+```
+
+
+
 #FORMS
 
 ##Validation
