@@ -97,7 +97,7 @@ if ( function_exists( 'add_image_size' ) ) {
 ```
 
 	
-#jQuery - No conflict
+###jQuery - No conflict
 
 ```javascript
 
@@ -105,6 +105,14 @@ jQuery(document).ready(function( $ ) {
 
 });
 ```
+###ID Exist
+
+```javascript
+if($("#tagLineCanvas").length){
+  tagLine();
+}
+```
+
 
 #OTHER Code
 
