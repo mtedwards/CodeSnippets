@@ -157,3 +157,21 @@ if($("#tagLineCanvas").length){
   </head>
   
 ```
+
+
+## Foundation Map Styles
+
+```css
+ #map-canvas *, #map-canvas *:before, #map-canvas *:after {
+        -moz-box-sizing: content-box!important;
+        -webkit-box-sizing: content-box!important;
+        box-sizing: content-box!important;  
+    }
+    #map-canvas img {
+        max-width: none;
+    }
+    #map-canvas label {
+        width: auto;
+        display: inline;
+    }
+ ```
