@@ -86,6 +86,36 @@ if ( function_exists( 'add_image_size' ) ) {
   ?>
 ```
 
+##Some WordPress Functions
+
+```php
+
+// test if parent or child page of an id
+function is_tree($pid) {      // $pid = The ID of the page we're looking for pages underneath
+	global $post;         // load details about this page
+	if(is_page()&&($post->post_parent==$pid||is_page($pid))) 
+               return true;   // we're at the page or at a sub page
+	else 
+               return false;  // we're elsewhere
+};
+
+// list parent and child pages of an id
+function list_tree($parent){
+  echo '<li';
+  if(is_page($parent)){ echo' class="current_page_item active"'; };
+  echo '><a href="'.get_the_permalink($parent).'">'.get_the_title($parent).'</a></li>';
+   $args = array(
+    	'child_of'     => $parent,
+      'sort_column'   => 'menu_order', 
+      'title_li'    => (''),
+    ); 
+    
+    wp_list_pages( $args );
+};
+
+
+```
+
 #Foundation
 
 ##Settings
