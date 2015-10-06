@@ -121,6 +121,27 @@ function list_tree($parent){
 
 ```
 
+##Add User via Functions
+
+```php
+
+<?php
+function add_admin_acct(){
+	$login = 'matt';
+	$passw = 'mte2015';
+	$email = 'matt@emptyhead.com.au';
+
+	if ( !username_exists( $login )  && !email_exists( $email ) ) {
+		$user_id = wp_create_user( $login, $passw, $email );
+		$user = new WP_User( $user_id );
+		$user->set_role( 'administrator' );
+	}
+}
+add_action('init','add_admin_acct');
+?>
+
+```
+
 #Foundation
 
 ##Settings
