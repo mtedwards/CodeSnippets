@@ -128,14 +128,14 @@ function list_tree($parent){
 function get_vimeo_details($video_url) {
 	$videoId = preg_replace("/\D/", "",$video_url);
 	if($videoId) {
-	$transName = 'videoDetails_'.$videoId;
-	$vidDetails = get_transient( $transName );
+		$transName = 'videoDetails_'.$videoId;
+		$vidDetails = get_transient( $transName );
 
-	if ( false === $vidDetails ) {
-		$hash = unserialize(file_get_contents("http://vimeo.com/api/v2/video/$videoId.php"));
-		$vidDetails = $hash[0];
-		set_transient( $transName, $vidDetails, 24 * HOUR_IN_SECONDS );
-	}
+		if ( false === $vidDetails ) {
+			$hash = unserialize(file_get_contents("http://vimeo.com/api/v2/video/$videoId.php"));
+			$vidDetails = $hash[0];
+			set_transient( $transName, $vidDetails, 24 * HOUR_IN_SECONDS );
+		}
 	return $vidDetails;
 	}
 }
