@@ -121,6 +121,34 @@ function list_tree($parent){
 
 ```
 
+###Get Vimeo video details from URL and store them in a transient
+
+```php
+
+function get_vimeo_details($video_url) {
+	$videoId = preg_replace("/\D/", "",$video_url);
+	if($videoId) {
+	$transName = 'videoDetails_'.$videoId;
+	$vidDetails = get_transient( $transName );
+
+	if ( false === $vidDetails ) {
+		$hash = unserialize(file_get_contents("http://vimeo.com/api/v2/video/$videoId.php"));
+		$vidDetails = $hash[0];
+		set_transient( $transName, $vidDetails, 24 * HOUR_IN_SECONDS );
+	}
+	return $vidDetails;
+	}
+}
+```
+Use it by then calling: 
+```php 
+	<?php $videoDetails = get_vimeo_details('https://vimeo.com/113439568'); ?>
+```
+and echo out all the details returned. For instance the large thumbnail: 
+```php
+	<?php echo $videoDetails['thumbnail_large']; ?>
+```
+
 ##Add User via Functions
 
 ```php
