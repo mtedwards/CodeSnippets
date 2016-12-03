@@ -259,8 +259,8 @@ if($("#tagLineCanvas").length){
         display: inline;
     }
  ```
- 
- #Header Mustard Cut
+
+# Header Mustard Cut
  
  ```php
  <?php 
@@ -281,7 +281,7 @@ if($("#tagLineCanvas").length){
   } ?>
  ```
  
- ###and the mustard-cut.js file mentioned above
+### and the mustard-cut.js file mentioned above
  
  ```js
  
