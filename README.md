@@ -319,3 +319,20 @@ if($("#tagLineCanvas").length){
       }
     }());
  ```
+#Gravity Forms
+
+##Emded form on site
+
+$id_or_title, $display_title, $display_description, $display_inactive, $field_values, $ajax, $tabindex, $echo
+
+```php
+	gravity_form( 1, false, false, false, '', false );
+```
+
+And the javascript
+
+$form_id, $is_ajax
+
+```php
+	gravity_form_enqueue_scripts( 4, true );
+```
