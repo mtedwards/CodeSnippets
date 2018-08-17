@@ -3,8 +3,8 @@ CodeSnippets
 
 CodeSnippets that I refer to a lot:
 
-[Grid Cheat Sheet](http://grid.malven.co/){:target="_blank"}
-[Flexbox Cheat Sheet](http://flexbox.malven.co/){:target="_blank"}
+[Grid Cheat Sheet](http://grid.malven.co/)
+[Flexbox Cheat Sheet](http://flexbox.malven.co/)
 
 
 #WordPress
