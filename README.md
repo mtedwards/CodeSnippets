@@ -3,7 +3,7 @@ CodeSnippets
 
 CodeSnippets that I refer to a lot:
 
-[Grid Cheat Sheet](http://grid.malven.co/)
+[Grid Cheat Sheet](http://grid.malven.co/)   
 [Flexbox Cheat Sheet](http://flexbox.malven.co/)
 
 
