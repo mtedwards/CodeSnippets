@@ -7,9 +7,9 @@ CodeSnippets that I refer to a lot:
 [Flexbox Cheat Sheet](http://flexbox.malven.co/)
 
 
-#WordPress
+# WordPress
 
-###Passing a variable through the content filter
+### Passing a variable through the content filter
 
 ```php
   <?php 
@@ -18,7 +18,7 @@ CodeSnippets that I refer to a lot:
   ?>
 ```
 
-###Retrieve and display a Video URL
+### Retrieve and display a Video URL
 
 ```php
   <?php 
@@ -28,7 +28,7 @@ CodeSnippets that I refer to a lot:
     echo $song;
   ?>
 ```
-###Featured Images
+### Featured Images
 The post thumbnail
 ```php
 <?php
@@ -47,6 +47,12 @@ Get Custom Size
 ?>
 ```
 
+```php
+ <?php echo wp_get_attachment_image($image['id'], 'full', false, array(
+      'loading' => 'lazy',
+      'class' => 'aligncenter',
+    )); ?>
+```
 
 Add Image Size
 ```php
@@ -57,9 +63,9 @@ if ( function_exists( 'add_image_size' ) ) {
 ```
 
 
-##The Loop
+## The Loop
 
-###Query by Custom Field
+### Query by Custom Field
 ```php
   <?php
     $args = array(
@@ -90,7 +96,7 @@ if ( function_exists( 'add_image_size' ) ) {
   ?>
 ```
 
-##Some WordPress Functions
+## Some WordPress Functions
 
 ```php
 
@@ -125,7 +131,7 @@ function list_tree($parent){
 
 ```
 
-###Get Vimeo video details from URL and store them in a transient
+### Get Vimeo video details from URL and store them in a transient
 
 ```php
 
@@ -153,7 +159,7 @@ and echo out all the details returned. For instance the large thumbnail:
 	<?php echo $videoDetails['thumbnail_large']; ?>
 ```
 
-##Add User via Functions
+## Add User via Functions
 
 ```php
 
