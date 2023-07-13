@@ -6,6 +6,10 @@ CodeSnippets that I refer to a lot:
 [Grid Cheat Sheet](http://grid.malven.co/)   
 [Simple Grid Layouts](https://emptyhead.s3-ap-southeast-2.amazonaws.com/simple-grid-layouts.pdf)
 
+```css
+	grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+```
+
 [Flexbox Cheat Sheet](http://flexbox.malven.co/)
 
 # Things to remember:
