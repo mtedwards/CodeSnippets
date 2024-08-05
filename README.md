@@ -20,6 +20,13 @@ grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
    isolation: isolate;
 ```
 
+### Relative color syntax
+
+```css
+   background-color: RGB(from var(--wp--preset--color--black) r g b / 0.4);
+```
+
+
 
 # WordPress
 
